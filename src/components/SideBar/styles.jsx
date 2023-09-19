@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import * as LogoStyles from 'components/Logo/styles';
 
 export const Wrapper = styled.aside`
@@ -6,7 +7,8 @@ export const Wrapper = styled.aside`
   background-color: ${({theme})=>theme.colors.white};
   max-width: 12.7rem;
   width: 100%;
-  padding: 1.1rem 0 4rem 0;
+  padding-top:1.1rem;
+  padding-bottom: 2.2rem;
  
   height: 100vh;
   flex-direction: column;

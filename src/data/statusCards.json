@@ -1,0 +1,20 @@
+[
+  {
+    "id":0,
+    "color":"blue"
+  },
+
+  {
+    "id":1,
+    "color":"darkGrey",
+    "value":"R$ 4.478,22",
+    "title":"Em lucro"
+  },
+
+  {
+    "id":2,
+    "color":"dark",
+    "value":"145",
+    "title":"Novas propostas"
+  }
+]

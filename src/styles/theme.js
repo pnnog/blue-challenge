@@ -16,7 +16,6 @@ export default {
     sm:'.5rem',
     md:'1rem',
     lg:'1.2rem',
-    full:'50%'
   },
 
   fontSize:{

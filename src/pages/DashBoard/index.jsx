@@ -1,20 +1,23 @@
 import { useEffect, useState } from 'react';
 
+import lastOffers from 'data/lastOffers.json';
+
 import SideBar from 'components/SideBar';
 import MobileMenu from 'components/MobileMenu';
 
 import * as S from './styles';
 import Header from 'components/Header';
-import StatusCard from 'components/StatusCard';
-import statusCards from 'data/statusCards.json';
+import Carousel from 'components/Carousel';
+import LastOffer from 'components/LastOffer';
+import { Heading } from 'UI';
 
 const DashBoard = () =>{
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-
+  
   useEffect(()=>{
     window.addEventListener('resize', () =>{
       let screenWidth = window.innerWidth;
-      if(screenWidth > 575) setMenuIsOpen(false);
+      if(screenWidth > 768) setMenuIsOpen(false);
     });
 
   },[]);
@@ -25,7 +28,7 @@ const DashBoard = () =>{
 
 
   return(
-    <S.Wrapper>
+    <>
       <SideBar />
       
       <S.Content>
@@ -33,34 +36,30 @@ const DashBoard = () =>{
         <S.Container>
 
           <S.Main>
-            <S.Cards>
-              {statusCards.map((card)=> <StatusCard
-                key={card.id } 
-                color={card.color} 
-                title={card.title} 
-                value={card.value}/>)}
-            </S.Cards>
+            <S.CarouselSection>
+              <Carousel />
+            </S.CarouselSection>
+
+            <Heading> Últimas propostas</Heading>
+
+            <S.LastOffersSection>
+              {lastOffers.map((lastOffer)=> (
+                <LastOffer  key={lastOffer.id} {...lastOffer} />  
+              ))}
+
+            </S.LastOffersSection>
           </S.Main>
 
           <S.News>
             CONTEÚDO de NOTÍCIAS
           </S.News>
-        
-
-
-
         </S.Container>
 
       </S.Content>
 
-
-
-
-
-
       <MobileMenu menuIsOpen ={menuIsOpen} closeMenu = {toggleMenu} />
 
-    </S.Wrapper>
+    </>
 
   );
 };

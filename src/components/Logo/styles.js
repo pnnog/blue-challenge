@@ -4,6 +4,7 @@ export const Wrapper = styled.picture`
   display: block;
   width: 7.7rem;
   height: 2.6rem;
+  cursor: pointer;
 
   img{
     width: 100%;

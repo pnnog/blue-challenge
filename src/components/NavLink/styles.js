@@ -26,7 +26,7 @@ export const Wrapper = styled(({as})=>as)`
   }
 
 
-  @media (min-width: 575px){
+  @media (min-width: 768px){
     gap: 1.2rem;
     padding: 1.3rem;
 
@@ -41,10 +41,6 @@ export const Wrapper = styled(({as})=>as)`
   }
 
 
-
-
- 
-
 `;
 
 
@@ -57,7 +53,7 @@ export const IconWrapper =  styled.picture`
 
   width: 2.4rem;
 
-  @media (min-width: 575px){
+  @media (min-width: 768px){
 
     img{
       max-width: 3rem;

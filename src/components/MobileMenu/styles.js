@@ -21,7 +21,7 @@ export const Wrapper = styled.menu`
   transition: all .3s ease-in-out ;
   display: flex;
   flex-direction: column;
-
+  
   ${({$menuIsOpen}) => !!$menuIsOpen && modifiers.isOpen()}
 
 

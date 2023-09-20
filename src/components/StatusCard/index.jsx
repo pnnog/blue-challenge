@@ -1,7 +1,7 @@
 import * as S from './styles';
 import statusCardImage from 'assets/statusCard/hand.png';
 
-const StatusCard = ({color ='blue', title, value}) =>{
+const StatusCard = ({color, title, value}) =>{
   return(
     <S.Wrapper $color = {color} >
 

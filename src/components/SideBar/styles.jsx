@@ -4,22 +4,24 @@ import * as LogoStyles from 'components/Logo/styles';
 
 export const Wrapper = styled.aside`
   display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 12.7rem;
   background-color: ${({theme})=>theme.colors.white};
-  max-width: 12.7rem;
-  width: 100%;
   padding-top:1.1rem;
   padding-bottom: 2.2rem;
- 
-  height: 100vh;
-  flex-direction: column;
   box-shadow: ${({theme})=> theme.shadow};
-  
+
+  flex-direction: column;
+
   ${LogoStyles.Wrapper}{
     align-self: center;
     margin-bottom: 9rem;
   }
 
-  @media (min-width:575px){
+  @media (min-width:768px){
     display: flex;
   }
  

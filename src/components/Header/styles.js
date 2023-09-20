@@ -10,12 +10,15 @@ export const Wrapper = styled.header`
   box-shadow: ${({theme})=> theme.shadow};
   background-color: ${({theme})=> theme.colors.white};
   border-bottom: .2rem solid ${({theme})=>theme.colors.blue};
+  margin-bottom: 4rem;
 
-  @media (min-width:575px){
+  @media (min-width:768px){
     display: block;
     height: 25.6rem;
     background-color: ${({theme})=> theme.colors.blue};
     border-bottom: none;
+    margin-bottom: 0;
+
   }
 `;
 
@@ -30,7 +33,7 @@ export const DesktopContent =  styled.div`
     height: 4.1rem;
   }
 
-  @media (min-width: 575px) {
+  @media (min-width: 768px) {
     display: flex;
   }
 `;
@@ -61,7 +64,7 @@ export const MobileContent = styled.div`
   }
 
 
-  @media (min-width: 575px) {
+  @media (min-width: 768px) {
     display: none;
   }
 

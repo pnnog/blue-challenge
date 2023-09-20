@@ -15,6 +15,11 @@ const GlobalStyles =  createGlobalStyle`
 
   body{
     font-size: 1.6rem;
+    background-color: ${({theme}) => theme.colors.white};
+
+    @media (min-width: 768px) {
+      background-color: ${({theme}) => theme.colors.xLightGrey};
+    }
   }
 
 `;

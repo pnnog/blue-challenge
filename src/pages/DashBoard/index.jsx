@@ -52,9 +52,7 @@ const DashBoard = () =>{
         <S.Updates>
           <Heading $sm> Atualizações</Heading>
 
-          {/* {updatesCards.map((card)=> (
-            <UpdateCard  key={card.id} card={card} />
-          ))} */}
+  
           <UpdatesCarousel />
 
             

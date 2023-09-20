@@ -10,6 +10,9 @@ const UpdatesCarousel = () =>{
 
 
   const breakPoints ={
+    [1]:{
+      slidesPerView:1
+    },
     [375]: {
       slidesPerView:1.6
     },

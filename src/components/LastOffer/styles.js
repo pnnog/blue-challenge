@@ -4,21 +4,27 @@ export const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 1.3rem 2.8rem; 
-  gap: 5rem;
+  justify-content:space-between;
+  gap: 4rem;
 
   box-shadow: ${({theme})=> theme.shadow};
   border-radius:${({theme})=> theme.radius.sm};
   overflow: hidden;
 
-  @media (min-width:769px ){
+  @media (min-width:768px ){
     padding: 1.3rem .8rem; 
     box-shadow: none;
     border-radius:0;
     overflow: hidden;
   }
 
-  @media (min-width: 900px){
-    gap: 9rem; 
+  @media (min-width: 1080px){
+    justify-content:flex-start;
+    gap: 6rem; 
+  }
+
+  @media (min-width: 1210px){
+    gap: 10rem; 
   }
 `;
   

@@ -18,7 +18,7 @@ export const Wrapper = styled.aside`
 
   ${LogoStyles.Wrapper}{
     align-self: center;
-    margin-bottom: 9rem;
+    margin-bottom: 8rem;
   }
 
   @media (min-width:768px){

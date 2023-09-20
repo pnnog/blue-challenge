@@ -1,33 +1,18 @@
+import { Container, Heading } from 'UI';
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
 
-`;
-
-
-export const Content =  styled.div`
+export const Content =  styled(Container)`
   display: flex;
   flex-direction: column;
-
-  @media (min-width: 768px){
-    margin-left: 12.7rem;
-  }
-`;
-
-export const Container = styled.div`
-  display: flex;
   gap: 2rem;
-  width: 100%;
-  flex-direction: column;
-  padding-left: 2.8rem;
-  padding-right: 2.8rem;
   transition: all .1s ease-in-out;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     margin-top: -16.9rem;
-  } 
+  }
 
-  @media (min-width: 1280px){
+  @media (min-width: 1080px){
     flex-direction: row;
   } 
   
@@ -35,13 +20,14 @@ export const Container = styled.div`
 
 
 export const Box = styled.div`
-  border-radius: ${({theme})=>theme.radius.sm};
   background-color: ${({theme})=>theme.colors.white};
-  box-shadow: none;
   height: 100%;
+  border-radius: ${({theme})=>theme.radius.sm};
+  box-shadow: none;
 
   @media (min-width: 768px) {
     box-shadow: ${({theme})=>theme.shadow};    
+
   }
   
 `;
@@ -50,29 +36,46 @@ export const Box = styled.div`
 export const Main = styled(Box).attrs({as:'main'})`
   flex: 1;
   padding: 4rem 0 .8rem;
+
+  ${Heading}{
+    @media (min-width: 768px){
+      margin-left: 5.2rem;
+    }
+  }
 `;
 
-export const News = styled(Box).attrs({as:'article'})`
-  min-width: 26.4rem;
+export const Updates = styled(Box).attrs({as:'article'})`
+  width: 100%;
+
+
+  @media (min-width: 1080px){
+    max-width: 26.4rem; 
+  }
+  
+  padding: 2.6rem 1.7rem;  
+
+  >div {
+    margin-bottom: 1.2rem;
+  }
+
+  >div:last-child{
+    margin-bottom: 0;
+  }
 `;
 
 export const CarouselSection = styled.section`
-  padding-left:4.2rem;
-  padding-right:4.2rem;
-
 `;
 
 export const LastOffersSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
 
-    display: flex;
-    flex-direction: column;
-    gap: 2.8rem;
+  > div:nth-child(even) {
+    background-color: ${({theme})=> theme.colors.xLightGrey};
+  }
 
-    >div:nth-child(even) {
-      background-color: ${({theme})=> theme.colors.xLightGrey};
-    }
-
-    @media (min-width: 768px){
-      gap: 0;
-    }
+  @media (min-width: 768px){
+    gap: 0;
+  }
 `;

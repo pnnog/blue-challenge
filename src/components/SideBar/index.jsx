@@ -1,10 +1,9 @@
 import Logo from 'components/Logo';
-import * as S from './styles';
 import NavLinks from 'components/NavLinks';
 
+import * as S from './styles';
+
 const SideBar = () =>{
-
-
   return(
     <S.Wrapper> 
       <Logo/>

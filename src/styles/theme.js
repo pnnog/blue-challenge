@@ -11,7 +11,8 @@ export default {
     xLightGrey: '#EDEDED'
   },
 
-  shadow:'0px 4px 4px 0px #00000040',
+  shadow:'0px 0px 4px 0px #00000040',
+
   radius:{
     sm:'.5rem',
     md:'1rem',

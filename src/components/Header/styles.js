@@ -1,32 +1,33 @@
+import { Container } from 'UI';
 import styled from 'styled-components';
 
-export const Wrapper = styled.header`
+export const Wrapper = styled(Container).attrs({as:'header'})`
   display: flex;
   align-items: center;
   height: 10rem;
-  padding: 1.3rem 2.8rem;
   width: 100%;
+  padding-top: 1.3rem;
+  padding-bottom: 1.1rem;
+  border-bottom: .2rem solid ${({theme})=>theme.colors.blue};
   
   box-shadow: ${({theme})=> theme.shadow};
   background-color: ${({theme})=> theme.colors.white};
-  border-bottom: .2rem solid ${({theme})=>theme.colors.blue};
-  margin-bottom: 4rem;
-
+  
   @media (min-width:768px){
     display: block;
     height: 25.6rem;
     background-color: ${({theme})=> theme.colors.blue};
     border-bottom: none;
     margin-bottom: 0;
-
   }
 `;
 
 export const DesktopContent =  styled.div`
-  flex: 1;
-  display: none;
+  display: flex;
   align-items: center;
+  display: none;
   justify-content: space-between;
+
 
   img{
     width: 4.1rem;
@@ -35,6 +36,7 @@ export const DesktopContent =  styled.div`
 
   @media (min-width: 768px) {
     display: flex;
+
   }
 `;
 
@@ -50,6 +52,7 @@ export const MobileContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 
   svg{
     width: 2.8rem;

@@ -34,14 +34,30 @@ export const Item = styled.div`
   gap: .3rem;
 
   p{
-  color: ${({theme})=> theme.colors.lightGrey};
-  font-size: ${({theme})=>theme.fontSize.sm};
-  font-weight: 400;
+    color: ${({theme})=> theme.colors.lightGrey};
+
+    font-size: ${({theme})=>theme.fontSize.md};
+    font-weight: 400;
   }
 
   span{
     color: ${({theme})=> theme.colors.dark};
-    font-size: ${({theme})=>theme.fontSize.md};
+    font-size: ${({theme})=>theme.fontSize.lg};
     font-weight: 700;
+  }
+
+  
+
+ 
+
+  @media (min-width: 768px){
+    p{
+    font-size: ${({theme})=>theme.fontSize.sm};
+  }
+
+  span{
+    font-size: ${({theme})=>theme.fontSize.md};
+  }
+
   }
 `;

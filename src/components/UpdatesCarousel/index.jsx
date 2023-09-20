@@ -5,32 +5,22 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import * as S from './styles';
 
 const UpdatesCarousel = () =>{
-
-  
-
-
   const breakPoints ={
     [1]:{
       slidesPerView:1
     },
-    [375]: {
+    [400]: {
+      slidesPerView:1.2
+    },
+
+    [470]: {
       slidesPerView:1.6
     },
 
-    [590]: {
+    [520]: {
       slidesPerView:2
     },
-
-    [780]:{
-      slidesPerView:2
-    },
-
-    [1080]:{
-      slidesPerView:1
-    }
   };
-
-
 
   return(
     <>

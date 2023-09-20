@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 
 import lastOffers from 'data/lastOffers.json';
-import updatesCards from 'data/updatesCards.json';
 
 import SideBar from 'components/SideBar';
 import MobileMenu from 'components/MobileMenu';
@@ -10,7 +9,6 @@ import * as S from './styles';
 import Header from 'components/Header';
 import LastOffer from 'components/LastOffer';
 import { Heading } from 'UI';
-import UpdateCard from 'components/UpdateCard';
 import UpdatesCarousel from 'components/UpdatesCarousel';
 
 const DashBoard = () =>{
@@ -52,7 +50,7 @@ const DashBoard = () =>{
         <S.Updates>
           <Heading $sm> Atualizações</Heading>
 
-  
+
           <UpdatesCarousel />
 
             

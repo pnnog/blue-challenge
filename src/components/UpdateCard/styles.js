@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   border-radius: ${({theme})=>theme.radius.lg};
   overflow: hidden;
   box-shadow: ${({theme})=>theme.shadow};
-  max-width: 300px;
+  width: 100%;
 
   @media (min-width: 1080px) {
     &:hover{
@@ -13,8 +13,6 @@ export const Wrapper = styled.div`
       transition: all .2s ease-out;
     }
   }
-
- 
 
 `;
 export const ImageBox = styled.picture`

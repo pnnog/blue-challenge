@@ -46,13 +46,19 @@ export const Main = styled(Box).attrs({as:'main'})`
 
 export const Updates = styled(Box).attrs({as:'article'})`
   width: 100%;
+  padding: 2.6rem 0rem; 
 
+
+  @media (min-width: 768px){
+    padding: 2.6rem 1.7rem; 
+  }
+ 
 
   @media (min-width: 1080px){
     max-width: 26.4rem; 
   }
   
-  padding: 2.6rem 1.7rem;  
+ 
 
   >div {
     margin-bottom: 1.2rem;

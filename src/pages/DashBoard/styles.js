@@ -21,21 +21,18 @@ export const Content =  styled(Container)`
 
 export const Box = styled.div`
   background-color: ${({theme})=>theme.colors.white};
-  height: 100%;
   border-radius: ${({theme})=>theme.radius.sm};
   box-shadow: none;
 
   @media (min-width: 768px) {
     box-shadow: ${({theme})=>theme.shadow};    
-
   }
   
 `;
 
-
 export const Main = styled(Box).attrs({as:'main'})`
-  flex: 1;
   padding: 4rem 0 .8rem;
+  flex: 1;
 
   ${Heading}{
     @media (min-width: 768px){
@@ -45,22 +42,19 @@ export const Main = styled(Box).attrs({as:'main'})`
 `;
 
 export const Updates = styled(Box).attrs({as:'article'})`
-  width: 100%;
-  padding: 2.6rem 0rem; 
-
-
+  padding: 2.6rem 0rem;
+  width:100%;
+  
   @media (min-width: 768px){
     padding: 2.6rem 1.7rem; 
   }
- 
 
-  @media (min-width: 1080px){
+  @media (min-width: 1080px){ 
     max-width: 26.4rem; 
+    width:100%;
   }
-  
- 
 
-  >div {
+  > div {
     margin-bottom: 1.2rem;
   }
 
@@ -69,7 +63,10 @@ export const Updates = styled(Box).attrs({as:'article'})`
   }
 `;
 
-export const CarouselSection = styled.section`
+export const StatusSection = styled.section` 
+  @media (min-width: 768px) {
+    padding: 0 5.2rem;
+  }
 `;
 
 export const LastOffersSection = styled.section`

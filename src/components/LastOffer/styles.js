@@ -20,11 +20,11 @@ export const Wrapper = styled.div`
 
   @media (min-width: 1080px){
     justify-content:flex-start;
-    gap: 6rem; 
+    gap: 5rem; 
   }
 
   @media (min-width: 1210px){
-    gap: 10rem; 
+    gap: 9rem; 
   }
 `;
   
@@ -46,18 +46,14 @@ export const Item = styled.div`
     font-weight: 700;
   }
 
-  
-
- 
-
   @media (min-width: 768px){
     p{
-    font-size: ${({theme})=>theme.fontSize.sm};
-  }
+      font-size: ${({theme})=>theme.fontSize.sm};
+    }
 
-  span{
-    font-size: ${({theme})=>theme.fontSize.md};
-  }
+    span{
+      font-size: ${({theme})=>theme.fontSize.md};
+    }
 
   }
 `;

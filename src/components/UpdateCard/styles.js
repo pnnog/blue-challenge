@@ -58,7 +58,7 @@ export const Title = styled.h4`
 export const Description = styled.p`
   font-weight: 400;
   font-size: 1.6rem;
-  color: ${({theme})=>theme.colors.dark};
+  color: ${({theme})=> theme.colors.dark};
 
   @media (min-width: 768px){
     font-size: ${({theme})=>theme.fontSize.md};   
@@ -71,7 +71,6 @@ export const ModalDescription = styled.p`
 `;
 
 export const Button = styled.button`
-display: block;
   background-color: transparent;
   border: 0;
   font-weight: 700;
@@ -79,7 +78,6 @@ display: block;
   color: ${({theme})=>theme.colors.blue};
   align-self: end;
   cursor: pointer;
-  z-index: 1000;
   margin-top: 3rem;
   
   @media (min-width: 768px){  

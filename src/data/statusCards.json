@@ -1,10 +1,10 @@
 [
   {
-    "id":0
+    "id":0,
+    "color": "blue"
   },
 
   {
-
     "id":1,
     "color":"darkGrey",
     "value":"R$ 4.478,22",

@@ -11,7 +11,6 @@ const StatusCard = ({color, title, value}) =>{
           <p> {title} </p>
         </S.Descrition>
       )}
-    
 
       <S.Image>
         <img src={statusCardImage} alt="Imagem de uma mão despejando moedas" />

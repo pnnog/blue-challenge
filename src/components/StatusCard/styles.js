@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   position: relative; 
-  min-width:22.4rem;
   width: 100%;
   height: 14.4rem;
   border-radius: ${({theme})=>theme.radius.md};

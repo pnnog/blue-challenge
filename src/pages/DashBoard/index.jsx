@@ -10,6 +10,7 @@ import Header from 'components/Header';
 import LastOffer from 'components/LastOffer';
 import { Heading } from 'UI';
 import UpdatesCarousel from 'components/UpdatesCarousel';
+import StatusCarousel from 'components/StatusCarousel';
 
 const DashBoard = () =>{
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -34,8 +35,9 @@ const DashBoard = () =>{
 
       <S.Content>
         <S.Main>
-          <S.CarouselSection>
-          </S.CarouselSection>
+          <S.StatusSection>
+            <StatusCarousel />
+          </S.StatusSection>
 
           <Heading> Últimas propostas</Heading>
 
@@ -49,8 +51,6 @@ const DashBoard = () =>{
 
         <S.Updates>
           <Heading $sm> Atualizações</Heading>
-
-
           <UpdatesCarousel />
 
             

@@ -3,16 +3,22 @@ import styled from 'styled-components';
 export const CarouselWrapper = styled.div`
   display: block;
   width: 100%;
-  max-width: 60rem;
-
+  
   .swiper-slide{
     padding:.2rem;
   }
 
-  .swiper-pagination-bullets{
-    @media (max-width:1080px ) {
-      bottom: 2.8rem
-    }
+  .swiper-horizontal > 
+  .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal{
+    left: 50%;
+    transform: translateX(-50%);
+    width:fit-content ;
+  }
+
+
+  @media (min-width: 768px){
+    max-width: 50rem;
   }
   
   @media (min-width: 1080px) {

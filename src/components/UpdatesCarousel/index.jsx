@@ -12,11 +12,7 @@ const UpdatesCarousel = () =>{
     [400]: {
       slidesPerView:1.2
     },
-
-    [470]: {
-      slidesPerView:1.6
-    },
-
+    
     [520]: {
       slidesPerView:2
     },

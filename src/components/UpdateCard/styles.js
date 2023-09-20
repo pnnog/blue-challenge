@@ -16,9 +16,14 @@ export const Wrapper = styled.div`
 
 `;
 export const ImageBox = styled.picture`
-  display: block;
-  width: 100%;
-  height: 11.2rem;  
+  display:none;
+
+  @media (min-width: 768px){
+    width: 100%;
+    display: block;
+    height: 11.2rem;  
+
+  }
 
   img{
     width: 100%;
@@ -30,22 +35,34 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding:.9rem .9rem .5rem;
   background-color:  #FFFFFF;
+  padding:1.2rem 1.2rem .8rem;
+
+  @media (min-width: 768px){
+    padding:.9rem .9rem .5rem;
+  }
 
 `;
 
 export const Title = styled.h4`
   font-weight: 700;
-  font-size: ${({theme})=>theme.fontSize.md};
+  font-size: 1.6rem;
   color: ${({theme})=>theme.colors.blue};
   margin-bottom: .9rem;
+
+  @media (min-width: 768px){
+    font-size: ${({theme})=>theme.fontSize.md};
+  }
 `;
 
 export const Description = styled.p`
   font-weight: 400;
-  font-size: ${({theme})=>theme.fontSize.md};
+  font-size: 1.6rem;
   color: ${({theme})=>theme.colors.dark};
+
+  @media (min-width: 768px){
+    font-size: ${({theme})=>theme.fontSize.md};   
+  }
 `;
 
 
@@ -54,14 +71,20 @@ export const ModalDescription = styled.p`
 `;
 
 export const Button = styled.button`
+display: block;
   background-color: transparent;
   border: 0;
   font-weight: 700;
-  font-size: ${({theme})=>theme.fontSize.md};
+  font-size: 1.4rem;
   color: ${({theme})=>theme.colors.blue};
   align-self: end;
   cursor: pointer;
+  z-index: 1000;
   margin-top: 3rem;
+  
+  @media (min-width: 768px){  
+    font-size: ${({theme})=>theme.fontSize.md}
+  };
 
 
   &:hover{

@@ -1,6 +1,9 @@
-## Landing page para psicóloga
+# Dashboard Blue
 
-Muitas pessoas quando procuram terapia não estão interessadas em passar por toda a burocracia de interagir com empresas e buscam na internet terapeutas autônomos. No entanto, pesquise agora mesmo no Google e irá descobrir que a Web carece de bons sites para os mesmos e esta landing page foi feita para aproveitar esta fatia do mercado.
+Esta aplicação faz parte do Desafio Técnico para a Healtech Blue.  Os requisitos consistem:
+
+- Implementar o design fornecido pelo figma fielmente.
+- Desenvolver o design e codificar a versão para telas menores seguindo.  
 
 # :hammer: Funcionalidades do projeto
 

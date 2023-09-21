@@ -3,19 +3,19 @@
 Esta aplicação faz parte do Desafio Técnico para a Healtech Blue. Os requisitos consistem:
 
 - Implementar o design fornecido pelo figma fielmente.
-- Desenvolver o design e codificar a versão para telas menores seguindo.  
+- Desenvolver o design e codificar a versão para telas menores. 
 
 ## :hammer: Implementação complementar
 
 - `Modal`: Os cards de atualizações possuem um modal responsivo. O modal pode ser fechado clicando em qualquer lugar da tela ou apertando a tecla ESC do teclado.
 
-- `Caroulsel`: Todos os cards se adaptam no formato carousel para telas menores.
+- `Carousel`: Todos os cards se adaptam no formato carousel para telas menores.
 
 - `Efeitos`: Alguns componentes receberam estilos de efeito para tornar a página mais interaiva.
 
-- `Pronto para receber da API`: A codificação foi feita pensando em uma futura integração a API's, recebendo os dados de arquivos JSON. Exemplos são a seção de atualizações, Últimas propostas e os cards no topo da página.
+- `Pronto para receber da API`: A codificação foi feita pensando em uma futura integração a API's, recebendo os dados de arquivos JSON. Exemplos são a seção de atualizações, últimas propostas e os cards no topo da página.
 
-- `Código limpo e estrutura de diretórios bem definida`: O projeto segue um padrão linear de pastas e arquivos pensando na implementação de mais rotas, como sugere o design.
+- `Código limpo e estrutura de diretórios bem definida`: O projeto segue um padrão linear de pastas e arquivos pensando na implementação de mais rotas, como sugere o design. Pastas, arquivos, métodos e variáveis possuem nome autoexplicativo. Toda a estilização foi feita seguindo um tema, predefinindo cores, tamanhos de fonte, camada de elemetnos, sombras e outros, facilitando a manutenção.
 
 ## :white_check_mark: Frameworks e biblitotecas utilizadas
 

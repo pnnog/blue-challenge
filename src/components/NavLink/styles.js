@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled(({as})=>as)`
+export const Wrapper = styled.button`
+  width: 100%;
   display: flex;
   align-items: center;
   background-color: white;
@@ -15,7 +16,6 @@ export const Wrapper = styled(({as})=>as)`
   &:hover{
     background-color: rgba(0,0,0,.2)
   }
-
 
   span{
     font-weight: 700;
@@ -36,10 +36,11 @@ export const Wrapper = styled(({as})=>as)`
 
 
 export const IconWrapper =  styled.picture`
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 1.8;
+  height: 1.8;
 
   img{
+    filter: ${({$active})=> $active? 'brightness(0%)' : 'brightness(100%)' };
     width: 100%;
     height: 100%;
   }

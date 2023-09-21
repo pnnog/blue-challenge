@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import * as UpdateCardStyles from 'components/UpdateCard/styles';
+import * as UpdateCardStyles from 'pages/DashBoard/components/UpdateCard/styles';
 
 export const Wrapper = styled.dialog`
   position: fixed;

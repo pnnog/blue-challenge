@@ -1,4 +1,4 @@
-import UpdateCard from 'components/UpdateCard';
+import UpdateCard from 'pages/DashBoard/components/UpdateCard';
 import updatesCards from 'data/updatesCards.json';
 import {Swiper, SwiperSlide} from 'swiper/react';
 

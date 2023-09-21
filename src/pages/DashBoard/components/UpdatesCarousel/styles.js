@@ -13,14 +13,11 @@ export const CarouselWrapper = styled(Caroulsel)`
 
 
   .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{
-  
     @media (min-width: 400px) {
       display: none;
     }
   }
 
-
-  
 `;
 
 export const CardsWrapper = styled.div`

@@ -1,7 +1,7 @@
 import {useEffect } from 'react';
 import { VscChromeClose } from 'react-icons/vsc';
 
-import UpdateCard from 'components/UpdateCard';
+import UpdateCard from 'pages/DashBoard/components/UpdateCard';
 
 import * as S from './styles';
 

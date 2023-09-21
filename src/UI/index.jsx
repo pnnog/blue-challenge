@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const modifiers = {
+const headingModifiers = {
   sm:(theme)=>`
     @media (min-width: 768px){
       font-size: ${theme.fontSize.md};
@@ -19,24 +19,21 @@ export const Heading = styled.h2`
     margin: 2.8rem 0;
   }
 
-  ${({theme, $sm})=> !!$sm && modifiers.sm(theme)};
+  ${({theme, $sm})=> !!$sm && headingModifiers.sm(theme)};
 `;
 
 export const Container = styled.div`
   width: 100%;
-  padding-left: 2.8rem;
-  padding-right: 2.8rem;
+  padding: 0 2.8rem 4rem;
+
 
   @media (min-width: 768px){
-    padding-left: 15.6rem;
+    padding: 0 2.8rem 4rem 15.6rem;
   }  
-  
-`;
 
-export const MainContainer = styled.div`
-  @media (min-width: 768px) {
-    padding: 0 5.2rem;
-  }
+  @media (min-width: 1080px){
+    padding: 0 2.8rem 0 15.6rem;
+  } 
 `;
 
 export const Caroulsel = styled.div`
@@ -69,3 +66,45 @@ export const Caroulsel = styled.div`
 
 `;
 
+
+const boxContainerModifiers ={
+
+  primary:() =>`
+    flex: 1;
+    @media (min-width: 768px) {
+      margin-top: -16.9rem;
+    }
+
+    @media (min-width: 768px) {
+      padding: 4rem 5.2rem .8rem;
+    }
+  
+  `,
+
+  secondary: () => `
+    @media (min-width: 768px){
+      padding: 2.6rem 1.7rem; 
+    }
+
+    @media (min-width: 1080px){ 
+      margin-top: -16.9rem;
+      padding: 2.6rem 1.7rem; 
+      max-width: 26.4rem; 
+      width:100%;
+    }
+  `
+};
+
+export const BoxContainer = styled.main`
+  background-color: ${({theme})=>theme.colors.white};
+  border-radius: ${({theme})=>theme.radius.sm};
+  box-shadow: none;
+  transition: all .1s ease-in-out;
+  @media (min-width: 768px) {
+    box-shadow: ${({theme})=>theme.shadow};
+  }
+
+  ${({$secondary})=> $secondary? boxContainerModifiers.secondary():boxContainerModifiers.primary()};
+  
+
+`;

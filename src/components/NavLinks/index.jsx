@@ -11,32 +11,32 @@ const NavLinks = () =>{
   const links = [ 
     {
       id:1,
-      active:true,
       icon:{
         image:dashboard,
         alt:'Imagem da dashboard'
       },
-      text:'Dashboard'
+      text:'Dashboard',
+      path:'/'
     },
 
     {
       id:2,
-      active:false,
       icon:{
         image:table,
         alt:'Imagem de Vendas'
       },
-      text:'Vendas'
+      text:'Vendas',
+      path:'/vendas'
     },
 
     {
       id:3,
-      active:false,
       icon:{
         image:money,
         alt:'Imagem de planos'
       },
       text:'Planos',
+      path:'/planos'
     },
   ];
 
@@ -48,18 +48,16 @@ const NavLinks = () =>{
             key={link.id} 
             icon={link.icon} 
             active={link.active}
-            href='#'
+            path = {link.path}
           >
             {link.text}
           </NavLink>
         ))}
       </div>
 
-      <NavLink icon={{ image:logout, alt:'Ícone de logout'}} as='button' >
+      <NavLink icon={{ image:logout, alt:'Ícone de logout'}} >
         Sair 
       </NavLink>
-
-
     </S.Wrapper >
   );
 };

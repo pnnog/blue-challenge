@@ -6,13 +6,13 @@ import CurrentDate from 'components/CurrentDate';
 
 import * as S from './styles';
 
-const Header = ({openMenu}) =>{
+const Header = ({setMenuIsOpen}) =>{
 
   return(
     <S.Wrapper >
       <S.MobileContent>
         <Logo />
-        <OpenMenuIcon onClick={() => openMenu()} />
+        <OpenMenuIcon onClick={() => setMenuIsOpen(true)} />
       </S.MobileContent>
  
       <S.DesktopContent>

@@ -1,7 +1,7 @@
 import {Swiper, SwiperSlide} from 'swiper/react';
 
 import statusCards from 'data/statusCards.json';
-import StatusCard from 'components/StatusCard';
+import StatusCard from 'pages/DashBoard/components/StatusCard';
 
 import * as S from './styles';
 

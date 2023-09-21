@@ -18,7 +18,7 @@ export const Wrapper = styled.menu`
   background-color: ${({theme})=>theme.colors.white};
   opacity: 0;
   pointer-events: none;
-  transition: all .3s ease-in-out ;
+  transition: all .2s ease-in-out ;
   display: flex;
   flex-direction: column;
   z-index: ${({theme})=>theme.layer.menu};

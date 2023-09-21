@@ -1,55 +1,28 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import lastOffers from 'data/lastOffers.json';
 
-import SideBar from 'components/SideBar';
-import MobileMenu from 'components/MobileMenu';
-import Header from 'components/Header';
-import LastOffer from 'components/LastOffer';
-import UpdatesCarousel from 'components/UpdatesCarousel';
-import StatusCarousel from 'components/StatusCarousel';
+import LastOffer from 'pages/DashBoard/components/LastOffer';
+import UpdatesCarousel from 'pages/DashBoard/components/UpdatesCarousel';
+import StatusCarousel from 'pages/DashBoard/components/StatusCarousel';
 import CurrentDate from 'components/CurrentDate';
-import UpdatesModal from 'components/UpdatesModal';
+import UpdatesModal from 'pages/DashBoard/components/UpdatesModal';
 
 import { Heading } from 'UI';
 import * as S from './styles';
 
 const DashBoard = () =>{
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [modalObject, setModalObject] = useState(null);
-
-  const toggleMenu =  () =>{
-    setMenuIsOpen(state => !state);
-  };
 
   const toggleModal = (newModal) =>{
     newModal? setModalObject(newModal): setModalObject(null);
   };
 
-  useEffect(()=>{
-    const checkWidth = () =>{
-      let screenWidth = window.innerWidth;
-      screenWidth > 768 && setMenuIsOpen(false);
-    };
-
-    checkWidth();
-    window.addEventListener('resize', checkWidth);
-
-    return () => {
-      window.removeEventListener('resize', checkWidth);
-    };
-
-  },[]);
-
   return(
     <>
-      <SideBar />
-      <Header openMenu = {toggleMenu} />
-
-      <S.Content>
+      <S.Wrapper>
         <S.Main>
           <CurrentDate />
-
           <StatusCarousel />
 
           <Heading> Últimas propostas</Heading>
@@ -66,9 +39,7 @@ const DashBoard = () =>{
           <Heading $sm> Atualizações</Heading>
           <UpdatesCarousel openModal={toggleModal} />
         </S.Updates>
-      </S.Content>
-
-      <MobileMenu menuIsOpen ={menuIsOpen} closeMenu = {toggleMenu} />
+      </S.Wrapper>
       <UpdatesModal modalObject = {modalObject} closeModal ={toggleModal}/>
 
     </>

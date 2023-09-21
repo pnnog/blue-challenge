@@ -5,20 +5,17 @@ import NavLinks from 'components/NavLinks';
 
 import * as S from './styles';
 
-const MobileMenu = ({menuIsOpen, closeMenu}) =>{
+const MobileMenu = ({menuIsOpen, setMenuIsOpen}) =>{
 
   return(
     <S.Wrapper $menuIsOpen={menuIsOpen}>
       <S.Header>
         <User withLabel/>
         <S.CloseIcon> 
-          <CloseMenuIcon onClick= {()=> closeMenu()} />
+          <CloseMenuIcon onClick= {()=> setMenuIsOpen(false)} />
         </S.CloseIcon>
       </S.Header>
-
       <NavLinks />
-  
-        
     </S.Wrapper>
       
   );};

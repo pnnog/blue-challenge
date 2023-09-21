@@ -11,11 +11,15 @@ Esta aplicação faz parte do Desafio Técnico para a Healtech Blue. Os requisit
 
 - `Carousel`: Todos os cards se adaptam no formato carousel para telas menores.
 
+- `Novas páginas: Em construção e Not Found`: As rotas /planos e /vendas podem ser acessadas através dos links de navegação e irão renderizar páginas que seguem inteiramente o padrão original, incluindo estrutura e responsividade. Além destas, qualquer outra rota acessada irá renderizar uma página de "rota não encontrada".
+
+- `Link ativo`: Os links da barra de navegação se destacam de acordo com a rota atual.
+
 - `Efeitos`: Alguns componentes receberam estilos de efeito para tornar a página mais interaiva.
 
 - `Pronto para receber da API`: A codificação foi feita pensando em uma futura integração a API's, recebendo os dados de arquivos JSON. Exemplos são a seção de atualizações, últimas propostas e os cards no topo da página.
 
-- `Código limpo e estrutura de diretórios bem definida`: O projeto segue um padrão linear de pastas e arquivos pensando na implementação de mais rotas, como sugere o design. Pastas, arquivos, métodos e variáveis possuem nome autoexplicativo. Toda a estilização foi feita seguindo um tema, predefinindo cores, tamanhos de fonte, camada de elementos, sombras e outros, facilitando a manutenção.
+- `Código limpo, reaproveitamento de código e fácil manutenção`:  Os diretórios são organizados por rota, dividindo componentes de uso específico de componentes para reuso em outras rotas. Através do styled components, os componentes de estilo foram feitos pensando no reaproveitamento. Pastas, arquivos, métodos e variáveis são nomeados de forma clara e objetiva. A estilização foi feita seguindo um tema, predefinindo cores, tamanhos de fonte, camada de elementos, sombras e outros, facilitando a manutenção.
 
 ## :white_check_mark: Frameworks e biblitotecas utilizadas
 

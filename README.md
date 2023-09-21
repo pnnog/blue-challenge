@@ -15,7 +15,7 @@ Esta aplicação faz parte do Desafio Técnico para a Healtech Blue. Os requisit
 
 - `Pronto para receber da API`: A codificação foi feita pensando em uma futura integração a API's, recebendo os dados de arquivos JSON. Exemplos são a seção de atualizações, últimas propostas e os cards no topo da página.
 
-- `Código limpo e estrutura de diretórios bem definida`: O projeto segue um padrão linear de pastas e arquivos pensando na implementação de mais rotas, como sugere o design. Pastas, arquivos, métodos e variáveis possuem nome autoexplicativo. Toda a estilização foi feita seguindo um tema, predefinindo cores, tamanhos de fonte, camada de elemetnos, sombras e outros, facilitando a manutenção.
+- `Código limpo e estrutura de diretórios bem definida`: O projeto segue um padrão linear de pastas e arquivos pensando na implementação de mais rotas, como sugere o design. Pastas, arquivos, métodos e variáveis possuem nome autoexplicativo. Toda a estilização foi feita seguindo um tema, predefinindo cores, tamanhos de fonte, camada de elementos, sombras e outros, facilitando a manutenção.
 
 ## :white_check_mark: Frameworks e biblitotecas utilizadas
 

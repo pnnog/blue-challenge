@@ -1,37 +1,42 @@
 # Dashboard Blue
 
-Esta aplicação faz parte do Desafio Técnico para a Healtech Blue.  Os requisitos consistem:
+Esta aplicação faz parte do Desafio Técnico para a Healtech Blue. Os requisitos consistem:
 
 - Implementar o design fornecido pelo figma fielmente.
 - Desenvolver o design e codificar a versão para telas menores seguindo.  
 
-# :hammer: Funcionalidades do projeto
+## :hammer: Implementação complementar
 
-- `Responsividade absoluta`: Responsividade é uma exigência pra qualquer aplicação web decente, mas esta faz isso de forma excepcional. Utilizando todo o poder do tailwind e as mais diversas técnicas de css, oferece um lindo menu adaptado para telas menores, proporções adequadas, botões e imagens nítidas e muito mais. Você terá um site vivo e interativo.
+- `Modal`: Os cards de atualizações possuem um modal responsivo. O modal pode ser fechado clicando em qualquer lugar da tela ou apertando a tecla ESC do teclado.
 
-- `Agendamento e recebimento de dados por email`: A proposta é clara: Apresente seu trabalho e convença o cliente a agendar uma consulta com você. Isto pode ser feito na sessão "Inicie sua jornada", onde o usuário irá preencher alguns dados e estes chegarão no seu email de forma organizada.
+- `Caroulsel`: Todos os cards se adaptam no formato carousel para telas menores.
 
-- `Confirmação de envio em tempo real`: Após preencher os dados necessários e clicar no botão de envio, o site irá informar ao cliente se seus dados foram ou não enviados para o psicólogo, garantindo que você não perca nenhum futuro paciente.
+- `Efeitos`: Alguns componentes receberam estilos de efeito para tornar a página mais interaiva.
 
-# :white_check_mark: Tecnologias utilizadas
+- `Pronto para receber da API`: A codificação foi feita pensando em uma futura integração a API's, recebendo os dados de arquivos JSON. Exemplos são a seção de atualizações, Últimas propostas e os cards no topo da página.
 
+- `Código limpo e estrutura de diretórios bem definida`: O projeto segue um padrão linear de pastas e arquivos pensando na implementação de mais rotas, como sugere o design.
+
+## :white_check_mark: Frameworks e biblitotecas utilizadas
+
+- Javascript
 - React js
-- Context Api
 - Vite
-- Tailwind CSS
-- Tailwind variants
-- EmailJs
+- Styled Components
+- React Icons
+- Swiper
+- EsLint
+  
+## :open_file_folder: Acesso ao projeto
 
-# :open_file_folder: Acesso ao projeto
 Você pode acessar o código fonte do projeto original ou baixá-lo
 
-# :checkered_flag: Abrir e rodar o projeto
+## :checkered_flag: Abrir e rodar o projeto
 
 - Baixe os arquivos .zip do projeto no botão "CODE"
-- Faça uma cópia de .env.local.example para um arquivo de nome .env.local e insira as variáveis de ambiente para utilizar o seu perfil do emailJS e receber os dados no seu email
 - Instale as dependências do client com `yarn`
 - Rode a aplicação com `yarn dev`
 
-# :globe_with_meridians: URL do projeto em produção
+### :globe_with_meridians: URL do projeto em produção
 
-https://psi-landing-page.vercel.app/
+https://blue-challenge.vercel.app/

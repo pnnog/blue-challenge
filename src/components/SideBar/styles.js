@@ -13,7 +13,6 @@ export const Wrapper = styled.aside`
   padding-top:1.1rem;
   padding-bottom: 2.2rem;
   box-shadow: ${({theme})=> theme.shadow};
-
   flex-direction: column;
 
   ${LogoStyles.Wrapper}{

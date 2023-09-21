@@ -1,4 +1,5 @@
 import * as S from './styles';
+
 const LastOffer = ({name, date, info}) => {
 
   return(

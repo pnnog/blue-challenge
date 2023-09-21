@@ -9,12 +9,10 @@ const StatusCarousel = () =>{
   const breakPoints = {
     [1]:{
       slidesPerView:1,
-      navigation: true,
-      pagination:{clickable:false}
     },
 
     [520]:{
-      slidesPerView:2
+      slidesPerView:2,
     },
 
     [868]:{
@@ -23,7 +21,6 @@ const StatusCarousel = () =>{
 
     [1080]: {
       slidesPerView:2.6
-  
     },
     
     [1280]: {
@@ -38,6 +35,8 @@ const StatusCarousel = () =>{
           breakpoints={breakPoints}
           pagination={{clickable:true}}
           spaceBetween={20}
+
+          
         >
           {statusCards.map(card =>(
             <SwiperSlide key={card.id}>

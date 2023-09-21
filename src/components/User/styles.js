@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   align-items: center;
   gap: .8rem;
   color: red;
+  cursor: pointer;
 
   p {
     color: ${({theme})=> theme.colors.white};

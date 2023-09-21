@@ -4,7 +4,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 
 import * as S from './styles';
 
-const UpdatesCarousel = () =>{
+const UpdatesCarousel = ({openModal}) =>{
   const breakPoints ={
     [1]:{
       slidesPerView:1
@@ -28,19 +28,16 @@ const UpdatesCarousel = () =>{
         >
           {updatesCards.map(card =>(
             <SwiperSlide key={card.id}>
-              <UpdateCard card={card}/>
+              <UpdateCard card={card} openModal = {openModal}/>
             </SwiperSlide>
           ))}
         </Swiper>
       </S.CarouselWrapper>
-      
-     
 
       <S.CardsWrapper>
         {updatesCards.map(card =>(
-          <UpdateCard key={card.id} card={card}/>
+          <UpdateCard key={card.id} card={card} openModal={openModal}/>
         ))}
-
       </S.CardsWrapper>
     </>
 

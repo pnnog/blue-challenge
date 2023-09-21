@@ -4,29 +4,42 @@ import lastOffers from 'data/lastOffers.json';
 
 import SideBar from 'components/SideBar';
 import MobileMenu from 'components/MobileMenu';
-
-import * as S from './styles';
 import Header from 'components/Header';
 import LastOffer from 'components/LastOffer';
-import { Heading } from 'UI';
 import UpdatesCarousel from 'components/UpdatesCarousel';
 import StatusCarousel from 'components/StatusCarousel';
+import CurrentDate from 'components/CurrentDate';
+import UpdatesModal from 'components/UpdatesModal';
+
+import { Heading } from 'UI';
+import * as S from './styles';
 
 const DashBoard = () =>{
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-  
-  useEffect(()=>{
-    window.addEventListener('resize', () =>{
-      let screenWidth = window.innerWidth;
-      screenWidth > 768 && setMenuIsOpen(false);
-    });
-
-  },[]);
+  const [modalObject, setModalObject] = useState(null);
 
   const toggleMenu =  () =>{
     setMenuIsOpen(state => !state);
   };
 
+  const toggleModal = (newModal) =>{
+    newModal? setModalObject(newModal): setModalObject(null);
+  };
+
+  useEffect(()=>{
+    const checkWidth = () =>{
+      let screenWidth = window.innerWidth;
+      screenWidth > 768 && setMenuIsOpen(false);
+    };
+
+    checkWidth();
+    window.addEventListener('resize', checkWidth);
+
+    return () => {
+      window.removeEventListener('resize', checkWidth);
+    };
+
+  },[]);
 
   return(
     <>
@@ -35,9 +48,9 @@ const DashBoard = () =>{
 
       <S.Content>
         <S.Main>
-          <S.StatusSection>
-            <StatusCarousel />
-          </S.StatusSection>
+          <CurrentDate />
+
+          <StatusCarousel />
 
           <Heading> Últimas propostas</Heading>
 
@@ -45,20 +58,18 @@ const DashBoard = () =>{
             {lastOffers.map((lastOffer)=> (
               <LastOffer  key={lastOffer.id} {...lastOffer} />  
             ))}
-
           </S.LastOffersSection>
+
         </S.Main>
 
         <S.Updates>
           <Heading $sm> Atualizações</Heading>
-          <UpdatesCarousel />
-
-            
+          <UpdatesCarousel openModal={toggleModal} />
         </S.Updates>
       </S.Content>
 
-
       <MobileMenu menuIsOpen ={menuIsOpen} closeMenu = {toggleMenu} />
+      <UpdatesModal modalObject = {modalObject} closeModal ={toggleModal}/>
 
     </>
 

@@ -40,7 +40,6 @@ const NavLinks = () =>{
     },
   ];
 
-  
   return(
     <S.Wrapper>
       <div>
@@ -49,6 +48,7 @@ const NavLinks = () =>{
             key={link.id} 
             icon={link.icon} 
             active={link.active}
+            href='#'
           >
             {link.text}
           </NavLink>

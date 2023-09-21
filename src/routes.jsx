@@ -1,9 +1,9 @@
 import DashBoard from 'pages/DashBoard';
 
-const App = () =>{
+const AppRoutes = () =>{
   return(
     <DashBoard />
   );
 };
 
-export default App;
+export default AppRoutes;

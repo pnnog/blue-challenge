@@ -1,6 +1,8 @@
-import { Container, Heading } from 'UI';
 import styled from 'styled-components';
 
+import { Container } from 'UI';
+import * as CurrentDateStyles from 'components/CurrentDate/styles';
+import * as StatusCarousel from 'components/StatusCarousel/styles';
 
 export const Content =  styled(Container)`
   display: flex;
@@ -18,7 +20,6 @@ export const Content =  styled(Container)`
   
 `;
 
-
 export const Box = styled.div`
   background-color: ${({theme})=>theme.colors.white};
   border-radius: ${({theme})=>theme.radius.sm};
@@ -31,18 +32,45 @@ export const Box = styled.div`
 `;
 
 export const Main = styled(Box).attrs({as:'main'})`
-  padding: 4rem 0 .8rem;
   flex: 1;
 
-  ${Heading}{
-    @media (min-width: 768px){
-      margin-left: 5.2rem;
+  ${CurrentDateStyles.Wrapper}{
+      color: ${({theme})=>theme.colors.blue};
+      margin-bottom: 2rem;
     }
+
+  ${StatusCarousel.Wrapper}{
+     margin-bottom: 5rem;
+
+    @media (min-width: 768px){
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 768px){
+    ${CurrentDateStyles.Wrapper}{
+      display: none;
+    }
+    padding: 4rem 5.2rem .8rem;
+  }
+`;
+
+export const LastOffersSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+
+  > div:nth-child(even) {
+    background-color: ${({theme})=> theme.colors.xLightGrey};
+  }
+
+  @media (min-width: 768px){
+    margin: 0 -5.2rem;
+    gap: 0;
   }
 `;
 
 export const Updates = styled(Box).attrs({as:'article'})`
-  padding: 2.6rem 0rem;
   width:100%;
   
   @media (min-width: 768px){
@@ -60,25 +88,5 @@ export const Updates = styled(Box).attrs({as:'article'})`
 
   >div:last-child{
     margin-bottom: 0;
-  }
-`;
-
-export const StatusSection = styled.section` 
-  @media (min-width: 768px) {
-    padding: 0 5.2rem;
-  }
-`;
-
-export const LastOffersSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 2.8rem;
-
-  > div:nth-child(even) {
-    background-color: ${({theme})=> theme.colors.xLightGrey};
-  }
-
-  @media (min-width: 768px){
-    gap: 0;
   }
 `;

@@ -30,7 +30,6 @@ export const Image = styled.picture`
   position: absolute;
   right: 1.5rem;
   bottom: 2.1rem;
-  
   width: 6.1rem;
   height: 6.1rem;
 

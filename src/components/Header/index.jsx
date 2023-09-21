@@ -1,9 +1,10 @@
 import {LuMenu as OpenMenuIcon} from 'react-icons/lu';
 
 import Logo from 'components/Logo';
+import User from 'components/User';
+import CurrentDate from 'components/CurrentDate';
 
 import * as S from './styles';
-import User from 'components/User';
 
 const Header = ({openMenu}) =>{
 
@@ -15,7 +16,7 @@ const Header = ({openMenu}) =>{
       </S.MobileContent>
  
       <S.DesktopContent>
-        <S.Date> Segunda, 22 de Outubro de 2023</S.Date>
+        <CurrentDate />
         <User />
       </S.DesktopContent>
       

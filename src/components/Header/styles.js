@@ -1,5 +1,5 @@
-import { Container } from 'UI';
 import styled from 'styled-components';
+import { Container } from 'UI';
 
 export const Wrapper = styled(Container).attrs({as:'header'})`
   display: flex;
@@ -9,6 +9,7 @@ export const Wrapper = styled(Container).attrs({as:'header'})`
   padding-top: 1.3rem;
   padding-bottom: 1.1rem;
   border-bottom: .2rem solid ${({theme})=>theme.colors.blue};
+  margin-bottom: 4rem;
   
   box-shadow: ${({theme})=> theme.shadow};
   background-color: ${({theme})=> theme.colors.white};
@@ -39,13 +40,6 @@ export const DesktopContent =  styled.div`
 
   }
 `;
-
-export const Date = styled.p`
-  color: ${({theme})=> theme.colors.white};
-  font-size: ${({theme})=> theme.fontSize.md};
-  font-weight: 700;
-`;
-
 
 export const MobileContent = styled.div`
   flex: 1;

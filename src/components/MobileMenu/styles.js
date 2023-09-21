@@ -21,14 +21,13 @@ export const Wrapper = styled.menu`
   transition: all .3s ease-in-out ;
   display: flex;
   flex-direction: column;
+  z-index: ${({theme})=>theme.layer.menu};
   
   ${({$menuIsOpen}) => !!$menuIsOpen && modifiers.isOpen()}
-
 
   ${NavLinkStyles.Wrapper}{
     border-bottom: 1px solid ${({theme})=> theme.colors.xLightGrey};
   }
-
 `;
 
 export const Header = styled.header`

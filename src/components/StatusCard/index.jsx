@@ -1,5 +1,6 @@
-import * as S from './styles';
 import statusCardImage from 'assets/statusCard/hand.png';
+
+import * as S from './styles';
 
 const StatusCard = ({color, title, value}) =>{
   return(

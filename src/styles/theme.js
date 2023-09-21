@@ -32,8 +32,7 @@ export default {
   layer:{
     base:'10',
     overlay:'20',
-    max: '50'
+    menu:'30',
+    modal:'50'
   }
-
-  
 };

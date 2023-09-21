@@ -16,18 +16,20 @@ export const Wrapper = styled.div`
 
 `;
 export const ImageBox = styled.picture`
-  display:none;
+  display: block;
+  height: 13.2rem;  
+  width: 100%;
 
   @media (min-width: 768px){
-    width: 100%;
     display: block;
     height: 11.2rem;  
-
   }
 
   img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: top;
   }
 `;
 
@@ -65,11 +67,6 @@ export const Description = styled.p`
   }
 `;
 
-
-export const ModalDescription = styled.p`
-  color: red;
-`;
-
 export const Button = styled.button`
   background-color: transparent;
   border: 0;
@@ -83,7 +80,6 @@ export const Button = styled.button`
   @media (min-width: 768px){  
     font-size: ${({theme})=>theme.fontSize.md}
   };
-
 
   &:hover{
     color: black;
